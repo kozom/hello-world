@@ -1,92 +1,105 @@
-How to use Git/Github
-=====================
+How to use Github
+=================
 
-Initial setting
----------------
+?
 
-1.  open your personal setting page on GitHub
-2.  open setting for Emails
-3.  check "Keep my email address private"
-4.  copy email-address `<username>@users.noreply.github.com`
-5.  register username and the email-address to your Git client
 
-        # example to register username and email-address from commandline
+Initial Setting
+===============
+
+Setup your Account
+------------------
+
+1.  sign up Github
+2.  open your personal setting page
+3.  open setting for Emails
+4.  check "Keep my email address private"
+5.  copy email-address `<username>@users.noreply.github.com`
+6.  download Git client and do the following on bash
+
+        # register username and email-address from bash
         git config --global user.name <username>
         git config --global user.email <email-address>
 
 
-Get all source files
---------------------
+Make your own repository
+------------------------
+
+?
+
+
+Clone exist repository
+----------------------
 
 1.  open a GitHub project which you want
 2.  click "Clone or Download" and copy URL "https://..."
-3.  clone project
+3.  do the following on bash
 
-        git clone <URL>
+        git clone <URL> # fetch repository to the current directory
 
-You will get all source files of the project in the current directory.
 
+Edit Repository
+===============
 
 Make development branch
 -----------------------
 
-1.  make new branch
+1.  do the following on bash
 
-        git branch <branch-name>
-        git checkout <branch-name>
+        git fetch                  # fetch master branch to make it up to date
+        git branch <branch-name>   # make new branch
+        git checkout <branch-name> # work on the branch
 
 See <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>.
 
 
-Modify and commit source files
-------------------------------
+Edit source files and commit them
+---------------------------------
 
-1.  make some changes to source files
-2.  commit source files
+1.  edit source files
+2.  do the following on bash
 
         git add .  # add all modified files to commit list
         git status # check what is changed
         git commit # input description of the commit in text editor
 
-Modified source files will be added to repository.
 
+Modify past commits (if necessary)
+-------------------
 
-Modify contents of commit
--------------------------
+1.  do the following on bash
 
-1.  choose commit which you want to modify, in text editor
+        git log --oneline --graph # show commit id
+        git rebase -i <commit id> # choose commit you want to rebase from
 
-        git rebase -i root
+2.  edit source files
+3.  do the following on bash
 
-2.  make some changes to source files
-3.  commit the changes
-
-        git commit --amend
-        git rebase --continue
+        git commit --amend    # commit the edit
+        git rebase --continue # continue rebasing
 
 
 Merge development branch
 ------------------------
 
-1.  merge development branch to master
+1.  do the following on bash
 
         git checkout master
-        git merge <branch-name>
-
-2.  delete development branch
-
-        git branch -d <branch-name>
+        git merge <branch-name>     # merge development branch to master branch
+        git branch -d <branch-name> # delete development branch
 
 
-Push to remote repository (Git style)
---------------------------------------------
+Push to remote repository (if Git style)
+----------------------------------------
 
-1.  push commit to remote repository
+1.  do the following on bash
 
-        git push
+        git fetch # fetch master branch to make it up to date
+        git merge # merge your edits
+        git push  # upload the repository
 
 
-Pull request (GitHub style)
----------------------------
+Pull request (if GitHub style)
+------------------------------
 
-(under construction)
+?
