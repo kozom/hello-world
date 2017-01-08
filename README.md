@@ -124,6 +124,7 @@ Pull request
 ------------
 
 1.  sign in Github
+2.  click "compare & pull request"
 
 
 Tips
