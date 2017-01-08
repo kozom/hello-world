@@ -7,13 +7,12 @@ Initial setting
 1.  open your personal setting page on GitHub
 2.  open setting for Emails
 3.  check "Keep my email address private"
-4.  copy email-address foo@users.noreply.github.com
+4.  copy email-address `<username>@users.noreply.github.com`
 5.  register username and the email-address to your Git client
 
+        # example to register username and email-address from commandline
         git config --global user.name <username>
         git config --global user.email <email-address>
-
-You will be able to use Git/GitHub without embedding your email address into your commits.
 
 
 Get all source files
@@ -36,7 +35,6 @@ Make development branch
         git branch <branch-name>
         git checkout <branch-name>
 
-You will work on development branch.
 See <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>.
 
 
@@ -50,7 +48,7 @@ Modify and commit source files
         git status # check what is changed
         git commit # input description of the commit in text editor
 
-Modified source files will be added to repository permanently.
+Modified source files will be added to repository.
 
 
 Modify containts of commit
@@ -66,8 +64,6 @@ Modify containts of commit
         git commit --amend
         git rebase --continue
 
-Modification will be done.
-
 
 Merge development branch
 ------------------------
@@ -81,17 +77,13 @@ Merge development branch
 
         git branch -d <branch-name>
 
-Development branch will be merged to master branch.
 
-
-Push to remote repository (not GitHub style)
+Push to remote repository (Git style)
 --------------------------------------------
 
 1.  push commit to remote repository
 
         git push
-
-Your commit will be reflected to remote repository directly.
 
 
 Pull request (GitHub style)
