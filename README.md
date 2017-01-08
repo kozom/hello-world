@@ -67,10 +67,10 @@ Make development branch
 
 1.  run the following commands
 
-        git fetch                  # fetch containts of remote repository
-        git merge origin/master    # merge local branch into remote branch
-        git branch <branch-name>   # make new branch
-        git checkout <branch-name> # work on the branch
+        git fetch                # fetch containts of remote repository
+        git merge origin/master  # merge local branch into remote branch
+        git branch development   # make new branch named "development"
+        git checkout development # work on the branch
 
 How should you make branch depends on your project's policy.
 See <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>.
@@ -137,8 +137,9 @@ Delete development branch
 
 1.  run the following commands
 
-        git checkout master         # select master as current branch
-        git branch -d <branch-name> # delete development branch
+        git checkout master                 # select master as current branch
+        git branch -d development           # delete local development branch
+        git branch -d -r origin/development # delete remote development branch
 
 
 Tips
